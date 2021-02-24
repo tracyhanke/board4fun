@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     username = Math.floor(Math.random() * 100);
   }
 
-  res.send('<!doctype html><html>mock config page\nusername: ' + username + '\n</html>');
+  res.send('mock config page username: ' + username);
 });
 
 http.listen(port, () => console.log('listening on port ' + port));
