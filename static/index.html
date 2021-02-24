@@ -10,6 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <style>
     body {
       height: 100%;
@@ -33,16 +36,16 @@
   <div class="main-entrance">
     <form>
       <h1 class="display-1 mb-3 fw-lighter">Welcome to Board4Fun!</h1>
-      <input type="text" id="inputName" class="mb-3 form-control" placeholder="Enter your name" required autofocus>
-      <select class="mb-3 form-select">
-        <option selected>Select a board game</option>
-        <option value="1">Draw & Guess</option>
+      <input type="text" id="username" class="mb-3 form-control" placeholder="Enter your name" required autofocus>
+      <select class="mb-3 form-select" id='game'>
+        <option selected disabled>Select a board game</option>
+        <option value="1">U Draw I Guess</option>
         <option value="2">Puerto Rico</option>
         <option value="3">Twilight Struggle</option>
       </select>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Create Game Room</button>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" id="createGameRoom">Create Game Room</button>
 
-      <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+      <p class="mt-5 mb-3 text-muted">Developed by Ke Han, &copy; 2021</p>
     </form>
   </div>
 </body>
